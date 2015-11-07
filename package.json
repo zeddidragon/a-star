@@ -1,0 +1,14 @@
+{
+  "name": "a-star",
+  "version": "1.0.0",
+  "description": "Simple a-star module. Not very configurable.",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "a-star"
+  ],
+  "author": "Tony A. Sæle",
+  "license": "ISC"
+}
