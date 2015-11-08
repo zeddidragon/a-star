@@ -9,7 +9,7 @@ module.exports =
   class AStar
     constructor: (@grid)->
 
-    path: (start, dest, opts)->
+    path: (start, dest, opts={})->
       start.distance = @distance start, dest
       start.cost = 0
       stack = [start]
@@ -64,4 +64,3 @@ module.exports =
       ret = [node]
       ret.push node while node = closed[node]
       ret
-
