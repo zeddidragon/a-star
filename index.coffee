@@ -26,10 +26,10 @@ module.exports =
         previous = node
         closest = node if node.distance < closest.distance
 
-        nodes = neighbors node
+        nodes = @neighbors node
           .filter (n)->
             node.cost < max and not closed[n]?
-          .map (n)->
+          .map (n)=>
             closed[n] = node
             n.cost = node.cost + 1
             n.distance = @distance n, dest
@@ -57,8 +57,8 @@ module.exports =
       NEIGHBORS
         .map (n)->
           [node[0] + n[0], node[1] + n[1]]
-        .filter (n)->
-          checkBounds(n[0], n[1]) and not @grid[n[1]][n[0]]
+        .filter (n)=>
+          @checkBounds(n[0], n[1]) and not @grid[n[1]][n[0]]
 
     makePath: (closed, node)->
       ret = [node]
